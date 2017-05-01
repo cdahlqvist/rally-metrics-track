@@ -239,6 +239,66 @@
       "name": "force-merge",
       "operation-type": "force-merge",
       "max_num_segments": 1
+    },
+    {
+      "name": "indicesstats_metricbeat_full_default",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_full_default"
+    },
+    {
+      "name": "indicesstats_metricbeat_full_best",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_full_best"
+    },
+    {
+      "name": "indicesstats_metricbeat_full_noall",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_full_noall"
+    },
+    {
+      "name": "indicesstats_metricbeat_full_best_noall",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_full_best_noall"
+    },
+    {
+      "name": "indicesstats_metricbeat_full_noall_nosource",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_full_noall_nosource"
+    },
+    {
+      "name": "indicesstats_metricbeat_full_noall_nosource_noindex",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_full_noall_nosource_noindex"
+    },
+    {
+      "name": "indicesstats_metricbeat_metrics_default",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_metrics_default"
+    },
+    {
+      "name": "indicesstats_metricbeat_metrics_best",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_metrics_best"
+    },
+    {
+      "name": "indicesstats_metricbeat_metrics_noall",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_metrics_noall"
+    },
+    {
+      "name": "indicesstats_metricbeat_metrics_best_noall",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_metrics_best_noall"
+    },
+    {
+      "name": "indicesstats_metricbeat_metrics_noall_nosource",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_metrics_noall_nosource"
+    },
+    {
+      "name": "indicesstats_metricbeat_metrics_noall_nosource_noindex",
+      "operation-type": "indicesstats",
+      "index_pattern": "metricbeat_metrics_noall_nosource_noindex"
     }
   ],
   "challenges": [
@@ -258,6 +318,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_full_default",
+          "iterations": 1
         }
       ]
     },
@@ -278,6 +342,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_full_best",
+          "iterations": 1
         }
       ]
     },
@@ -297,6 +365,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_full_noall",
+          "iterations": 1
         }
       ]
     },
@@ -317,6 +389,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_full_best_noall",
+          "iterations": 1
         }
       ]
     },
@@ -336,6 +412,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_full_noall_nosource",
+          "iterations": 1
         }
       ]
     },
@@ -355,6 +435,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_full_noall_nosource_noindex",
+          "iterations": 1
         }
       ]
     },
@@ -374,6 +458,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_metrics_default",
+          "iterations": 1
         }
       ]
     },
@@ -394,6 +482,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_metrics_best",
+          "iterations": 1
         }
       ]
     },
@@ -413,6 +505,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_metrics_noall",
+          "iterations": 1
         }
       ]
     },
@@ -433,6 +529,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_metrics_best_noall",
+          "iterations": 1
         }
       ]
     },
@@ -452,6 +552,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_metrics_noall_nosource",
+          "iterations": 1
         }
       ]
     },
@@ -471,6 +575,10 @@
         {
           "operation": "force-merge",
           "clients": 1
+        },
+        {
+          "operation": "indicesstats_metricbeat_metrics_noall_nosource_noindex",
+          "iterations": 1
         }
       ]
     }
