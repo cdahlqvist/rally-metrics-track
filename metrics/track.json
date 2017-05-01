@@ -1,0 +1,478 @@
+{
+  "meta": {
+    "short-description": "Metrics benchmark",
+    "description": "This benchmark indexes Metricbeat data collected from Elastic intrastructure.",
+    "data-url": "http://users.elasticsearch.org.s3.amazonaws.com/cdahlqvist/rally"
+  },
+  "indices": [
+    {
+      "name": "metricbeat_full_default",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_default.json",
+          "documents": "metricbeat_full.json.bz2",
+          "document-count": 14499581,
+          "compressed-bytes": 202184602,
+          "uncompressed-bytes": 9289659717
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_full_best",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_default.json",
+          "documents": "metricbeat_full.json.bz2",
+          "document-count": 14499581,
+          "compressed-bytes": 202184602,
+          "uncompressed-bytes": 9289659717
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_full_noall",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_noall.json",
+          "documents": "metricbeat_full.json.bz2",
+          "document-count": 14499581,
+          "compressed-bytes": 202184602,
+          "uncompressed-bytes": 9289659717
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_full_best_noall",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_noall.json",
+          "documents": "metricbeat_full.json.bz2",
+          "document-count": 14499581,
+          "compressed-bytes": 202184602,
+          "uncompressed-bytes": 9289659717
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_full_noall_nosource",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_noall_nosource.json",
+          "documents": "metricbeat_full.json.bz2",
+          "document-count": 14499581,
+          "compressed-bytes": 202184602,
+          "uncompressed-bytes": 9289659717
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_full_noall_nosource_noindex",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_noall_nosource_noindex.json",
+          "documents": "metricbeat_full.json.bz2",
+          "document-count": 14499581,
+          "compressed-bytes": 202184602,
+          "uncompressed-bytes": 9289659717
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_metrics_default",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metrics_default.json",
+          "documents": "metricbeat_metrics.json.bz2",
+          "document-count": 107337861,
+          "compressed-bytes": 503158609,
+          "uncompressed-bytes": 58543131196
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_metrics_best",
+      "types": [
+        {
+          "name": "type",
+          "mapping": "metrics_default.json",
+          "documents": "metricbeat_metrics.json.bz2",
+          "document-count": 107337861,
+          "compressed-bytes": 503158609,
+          "uncompressed-bytes": 58543131196
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_metrics_noall",
+      "types": [
+        {
+          "name": "type",
+          "mapping": "metrics_noall.json",
+          "documents": "metricbeat_metrics.json.bz2",
+          "document-count": 107337861,
+          "compressed-bytes": 503158609,
+          "uncompressed-bytes": 58543131196
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_metrics_best_noall",
+      "types": [
+        {
+          "name": "type",
+          "mapping": "metrics_noall.json",
+          "documents": "metricbeat_metrics.json.bz2",
+          "document-count": 107337861,
+          "compressed-bytes": 503158609,
+          "uncompressed-bytes": 58543131196
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_metrics_noall_nosource",
+      "types": [
+        {
+          "name": "type",
+          "mapping": "metrics_noall_nosource.json",
+          "documents": "metricbeat_metrics.json.bz2",
+          "document-count": 107337861,
+          "compressed-bytes": 503158609,
+          "uncompressed-bytes": 58543131196
+        }
+      ]
+    },
+    {
+      "name": "metricbeat_metrics_noall_nosource_noindex",
+      "types": [
+        {
+          "name": "type",
+          "mapping": "metricbeat_noall_nosource_noindex.json",
+          "documents": "metricbeat_metrics.json.bz2",
+          "document-count": 107337861,
+          "compressed-bytes": 503158609,
+          "uncompressed-bytes": 58543131196
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "name": "index-append-metricbeat_full_default",
+      "operation-type": "index",
+      "index": "metricbeat_full_default",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_full_best",
+      "operation-type": "index",
+      "index": "metricbeat_full_best",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_full_noall",
+      "operation-type": "index",
+      "index": "metricbeat_full_noall",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_full_best_noall",
+      "operation-type": "index",
+      "index": "metricbeat_full_best_noall",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_full_noall_nosource",
+      "operation-type": "index",
+      "index": "metricbeat_full_noall_nosource",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_full_noall_nosource_noindex",
+      "operation-type": "index",
+      "index": "metricbeat_full_noall_nosource_noindex",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_metrics_default",
+      "operation-type": "index",
+      "index": "metricbeat_metrics_default",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_metrics_best",
+      "operation-type": "index",
+      "index": "metricbeat_metrics_best",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_metrics_noall",
+      "operation-type": "index",
+      "index": "metricbeat_metrics_noall",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_metrics_best_noall",
+      "operation-type": "index",
+      "index": "metricbeat_metrics_best_noall",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_metrics_noall_nosource",
+      "operation-type": "index",
+      "index": "metricbeat_metrics_noall_nosource",
+      "bulk-size": 1000
+    },
+    {
+      "name": "index-append-metricbeat_metrics_noall_nosource_noindex",
+      "operation-type": "index",
+      "index": "metricbeat_metrics_noall_nosource_noindex",
+      "bulk-size": 1000
+    },
+    {
+      "name": "force-merge",
+      "operation-type": "force-merge",
+      "max_num_segments": 1
+    }
+  ],
+  "challenges": [
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_full_default",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_full_default",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_full_best",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0,
+        "index.codec": "best_compression"
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_full_best",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_full_noall",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_full_noall",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_full_best_noall",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0,
+        "index.codec": "best_compression"
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_full_best_noall",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_full_noall_nosource",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_full_noall_nosource",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_full_noall_nosource_noindex",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_full_noall_nosource_noindex",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_metric_default",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_metric_default",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_metric_best",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0,
+        "index.codec": "best_compression"
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_metric_best",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_metric_noall",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_metric_noall",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_metric_best_noall",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0,
+        "index.codec": "best_compression"
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_metric_best_noall",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_metric_noall_nosource",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_metric_noall_nosource",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    },
+    {
+      "name": "append-no-conflicts-index-append-metricbeat_metric_noall_nosource_noindex",
+      "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "index-append-metricbeat_metric_noall_nosource_noindex",
+          "warmup-time-period": 0,
+          "clients": 8
+        },
+        {
+          "operation": "force-merge",
+          "clients": 1
+        }
+      ]
+    }
+  ]
+}

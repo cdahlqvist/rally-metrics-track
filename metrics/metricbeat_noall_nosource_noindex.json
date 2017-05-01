@@ -1,0 +1,1328 @@
+{
+  "metricsets": {
+    "_meta": {
+      "version": "5.2.0"
+    },
+    "_all": {
+      "enabled": false
+    },
+    "_source": {
+      "enabled": false
+    },
+    "dynamic_templates": [{
+      "strings_as_keyword": {
+        "match_mapping_type": "string",
+        "mapping": {
+          "ignore_above": 1024,
+          "type": "keyword"
+        }
+      }
+    }],
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "beat": {
+        "properties": {
+          "hostname": {
+            "type": "keyword",
+            "ignore_above": 1024
+          },
+          "name": {
+            "type": "keyword",
+            "ignore_above": 1024
+          },
+          "version": {
+            "type": "keyword",
+            "ignore_above": 1024
+          }
+        }
+      },
+      "meta": {
+        "properties": {
+          "cloud": {
+            "properties": {
+              "availability_zone": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "instance_id": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "machine_type": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "project_id": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "provider": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "region": {
+                "type": "keyword",
+                "ignore_above": 1024
+              }
+            }
+          }
+        }
+      },
+      "metricset": {
+        "properties": {
+          "host": {
+            "type": "keyword",
+            "ignore_above": 1024
+          },
+          "module": {
+            "type": "keyword",
+            "ignore_above": 1024
+          },
+          "name": {
+            "type": "keyword",
+            "ignore_above": 1024
+          },
+          "namespace": {
+            "type": "keyword",
+            "ignore_above": 1024
+          },
+          "rtt": {
+            "type": "long",
+            "doc_values": true,
+            "index": "no"
+          }
+        }
+      },
+      "system": {
+        "properties": {
+          "core": {
+            "properties": {
+              "id": {
+                "type": "long"
+              },
+              "idle": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "iowait": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "irq": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "nice": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "softirq": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "steal": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "system": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "user": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "cpu": {
+            "properties": {
+              "cores": {
+                "type": "long"
+              },
+              "idle": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "iowait": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "irq": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "nice": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "softirq": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "steal": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "system": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "user": {
+                "properties": {
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "ticks": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "diskio": {
+            "properties": {
+              "io": {
+                "properties": {
+                  "time": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "name": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "read": {
+                "properties": {
+                  "bytes": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "count": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "time": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "serial_number": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "write": {
+                "properties": {
+                  "bytes": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "count": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "time": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "filesystem": {
+            "properties": {
+              "available": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "device_name": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "files": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "free": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "free_files": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "mount_point": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "total": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "used": {
+                "properties": {
+                  "bytes": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "fsstat": {
+            "properties": {
+              "count": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "total_files": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "total_size": {
+                "properties": {
+                  "free": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "total": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "used": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "load": {
+            "properties": {
+              "1": {
+                "type": "scaled_float",
+                "scaling_factor": 100.0,
+                "doc_values": true,
+                "index": "no"
+              },
+              "15": {
+                "type": "scaled_float",
+                "scaling_factor": 100.0,
+                "doc_values": true,
+                "index": "no"
+              },
+              "5": {
+                "type": "scaled_float",
+                "scaling_factor": 100.0,
+                "doc_values": true,
+                "index": "no"
+              },
+              "norm": {
+                "properties": {
+                  "1": {
+                    "type": "scaled_float",
+                    "scaling_factor": 100.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "15": {
+                    "type": "scaled_float",
+                    "scaling_factor": 100.0,
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "5": {
+                    "type": "scaled_float",
+                    "scaling_factor": 100.0,
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "memory": {
+            "properties": {
+              "actual": {
+                "properties": {
+                  "free": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "used": {
+                    "properties": {
+                      "bytes": {
+                        "type": "long",
+                        "doc_values": true,
+                        "index": "no"
+                      },
+                      "pct": {
+                        "type": "scaled_float",
+                        "scaling_factor": 1000.0,
+                        "doc_values": true,
+                        "index": "no"
+                      }
+                    }
+                  }
+                }
+              },
+              "free": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "swap": {
+                "properties": {
+                  "free": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "total": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "used": {
+                    "properties": {
+                      "bytes": {
+                        "type": "long",
+                        "doc_values": true,
+                        "index": "no"
+                      },
+                      "pct": {
+                        "type": "scaled_float",
+                        "scaling_factor": 1000.0,
+                        "doc_values": true,
+                        "index": "no"
+                      }
+                    }
+                  }
+                }
+              },
+              "total": {
+                "type": "long",
+                "doc_values": true,
+                "index": "no"
+              },
+              "used": {
+                "properties": {
+                  "bytes": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "pct": {
+                    "type": "scaled_float",
+                    "scaling_factor": 1000.0,
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "network": {
+            "properties": {
+              "in": {
+                "properties": {
+                  "bytes": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "dropped": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "errors": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "packets": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "name": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "out": {
+                "properties": {
+                  "bytes": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "dropped": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "errors": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "packets": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              }
+            }
+          },
+          "process": {
+            "properties": {
+              "cgroup": {
+                "properties": {
+                  "blkio": {
+                    "properties": {
+                      "id": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "path": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "total": {
+                        "properties": {
+                          "bytes": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "ios": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "cpu": {
+                    "properties": {
+                      "cfs": {
+                        "properties": {
+                          "period": {
+                            "properties": {
+                              "us": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "quota": {
+                            "properties": {
+                              "us": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "shares": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          }
+                        }
+                      },
+                      "id": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "path": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "rt": {
+                        "properties": {
+                          "period": {
+                            "properties": {
+                              "us": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "runtime": {
+                            "properties": {
+                              "us": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "stats": {
+                        "properties": {
+                          "periods": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "throttled": {
+                            "properties": {
+                              "ns": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              },
+                              "periods": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "cpuacct": {
+                    "properties": {
+                      "id": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "path": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "stats": {
+                        "properties": {
+                          "system": {
+                            "properties": {
+                              "ns": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "user": {
+                            "properties": {
+                              "ns": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "total": {
+                        "properties": {
+                          "ns": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "id": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "memory": {
+                    "properties": {
+                      "id": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "kmem": {
+                        "properties": {
+                          "failures": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "limit": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "usage": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              },
+                              "max": {
+                                "properties": {
+                                  "bytes": {
+                                    "type": "long",
+                                    "doc_values": true,
+                                    "index": "no"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "kmem_tcp": {
+                        "properties": {
+                          "failures": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "limit": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "usage": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              },
+                              "max": {
+                                "properties": {
+                                  "bytes": {
+                                    "type": "long",
+                                    "doc_values": true,
+                                    "index": "no"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "mem": {
+                        "properties": {
+                          "failures": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "limit": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "usage": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              },
+                              "max": {
+                                "properties": {
+                                  "bytes": {
+                                    "type": "long",
+                                    "doc_values": true,
+                                    "index": "no"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "memsw": {
+                        "properties": {
+                          "failures": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "limit": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "usage": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              },
+                              "max": {
+                                "properties": {
+                                  "bytes": {
+                                    "type": "long",
+                                    "doc_values": true,
+                                    "index": "no"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "path": {
+                        "type": "keyword",
+                        "ignore_above": 1024
+                      },
+                      "stats": {
+                        "properties": {
+                          "active_anon": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "active_file": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "cache": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "hierarchical_memory_limit": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "hierarchical_memsw_limit": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "inactive_anon": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "inactive_file": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "major_page_faults": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "mapped_file": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "page_faults": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "pages_in": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "pages_out": {
+                            "type": "long",
+                            "doc_values": true,
+                            "index": "no"
+                          },
+                          "rss": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "rss_huge": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "swap": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          },
+                          "unevictable": {
+                            "properties": {
+                              "bytes": {
+                                "type": "long",
+                                "doc_values": true,
+                                "index": "no"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "path": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  }
+                }
+              },
+              "cmdline": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "cpu": {
+                "properties": {
+                  "start_time": {
+                    "type": "date"
+                  },
+                  "system": {
+                    "type": "long"
+                  },
+                  "total": {
+                    "properties": {
+                      "pct": {
+                        "type": "scaled_float",
+                        "scaling_factor": 1000.0,
+                        "doc_values": true,
+                        "index": "no"
+                      },
+                      "ticks": {
+                        "type": "long",
+                        "doc_values": true,
+                        "index": "no"
+                      }
+                    }
+                  },
+                  "user": {
+                    "type": "long"
+                  }
+                }
+              },
+              "fd": {
+                "properties": {
+                  "limit": {
+                    "properties": {
+                      "hard": {
+                        "type": "long",
+                        "doc_values": true,
+                        "index": "no"
+                      },
+                      "soft": {
+                        "type": "long",
+                        "doc_values": true,
+                        "index": "no"
+                      }
+                    }
+                  },
+                  "open": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "memory": {
+                "properties": {
+                  "rss": {
+                    "properties": {
+                      "bytes": {
+                        "type": "long",
+                        "doc_values": true,
+                        "index": "no"
+                      },
+                      "pct": {
+                        "type": "scaled_float",
+                        "scaling_factor": 1000.0,
+                        "doc_values": true,
+                        "index": "no"
+                      }
+                    }
+                  },
+                  "share": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  },
+                  "size": {
+                    "type": "long",
+                    "doc_values": true,
+                    "index": "no"
+                  }
+                }
+              },
+              "name": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "pgid": {
+                "type": "long"
+              },
+              "pid": {
+                "type": "long"
+              },
+              "ppid": {
+                "type": "long"
+              },
+              "state": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "username": {
+                "type": "keyword",
+                "ignore_above": 1024
+              }
+            }
+          },
+          "socket": {
+            "properties": {
+              "direction": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "family": {
+                "type": "keyword",
+                "ignore_above": 1024
+              },
+              "local": {
+                "properties": {
+                  "ip": {
+                    "type": "ip"
+                  },
+                  "port": {
+                    "type": "long"
+                  }
+                }
+              },
+              "process": {
+                "properties": {
+                  "cmdline": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "command": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "exe": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "pid": {
+                    "type": "long"
+                  }
+                }
+              },
+              "remote": {
+                "properties": {
+                  "etld_plus_one": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "host": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "host_error": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  },
+                  "ip": {
+                    "type": "ip"
+                  },
+                  "port": {
+                    "type": "long"
+                  }
+                }
+              },
+              "user": {
+                "properties": {
+                  "id": {
+                    "type": "long"
+                  },
+                  "name": {
+                    "type": "keyword",
+                    "ignore_above": 1024
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "tags": {
+        "type": "keyword",
+        "ignore_above": 1024
+      },
+      "type": {
+        "type": "keyword",
+        "ignore_above": 1024
+      }
+    }
+  }
+}
