@@ -443,7 +443,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-metricbeat_metric_default",
+      "name": "append-no-conflicts-metricbeat_metrics_default",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -451,7 +451,7 @@
       },
       "schedule": [
         {
-          "operation": "index-append-metricbeat_metric_default",
+          "operation": "index-append-metricbeat_metrics_default",
           "warmup-time-period": 0,
           "clients": 8
         },
@@ -466,7 +466,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-metricbeat_metric_best",
+      "name": "append-no-conflicts-metricbeat_metrics_best",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -475,7 +475,7 @@
       },
       "schedule": [
         {
-          "operation": "index-append-metricbeat_metric_best",
+          "operation": "index-append-metricbeat_metrics_best",
           "warmup-time-period": 0,
           "clients": 8
         },
@@ -490,7 +490,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-metricbeat_metric_noall",
+      "name": "append-no-conflicts-metricbeat_metrics_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -498,7 +498,7 @@
       },
       "schedule": [
         {
-          "operation": "index-append-metricbeat_metric_noall",
+          "operation": "index-append-metricbeat_metrics_noall",
           "warmup-time-period": 0,
           "clients": 8
         },
@@ -513,7 +513,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-metricbeat_metric_best_noall",
+      "name": "append-no-conflicts-metricbeat_metrics_best_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -522,7 +522,7 @@
       },
       "schedule": [
         {
-          "operation": "index-append-metricbeat_metric_best_noall",
+          "operation": "index-append-metricbeat_metrics_best_noall",
           "warmup-time-period": 0,
           "clients": 8
         },
@@ -537,7 +537,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-metricbeat_metric_noall_nosource",
+      "name": "append-no-conflicts-metricbeat_metrics_noall_nosource",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -545,7 +545,7 @@
       },
       "schedule": [
         {
-          "operation": "index-append-metricbeat_metric_noall_nosource",
+          "operation": "index-append-metricbeat_metrics_noall_nosource",
           "warmup-time-period": 0,
           "clients": 8
         },
@@ -560,7 +560,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-metricbeat_metric_noall_nosource_noindex",
+      "name": "append-no-conflicts-metricbeat_metrics_noall_nosource_noindex",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -568,7 +568,7 @@
       },
       "schedule": [
         {
-          "operation": "index-append-metricbeat_metric_noall_nosource_noindex",
+          "operation": "index-append-metricbeat_metrics_noall_nosource_noindex",
           "warmup-time-period": 0,
           "clients": 8
         },
