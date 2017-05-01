@@ -303,7 +303,7 @@
   ],
   "challenges": [
     {
-      "name": "append-no-conflicts-index-append-metricbeat_full_default",
+      "name": "append-no-conflicts-metricbeat_full_default",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_full_best",
+      "name": "append-no-conflicts-metricbeat_full_best",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_full_noall",
+      "name": "append-no-conflicts-metricbeat_full_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -373,7 +373,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_full_best_noall",
+      "name": "append-no-conflicts-metricbeat_full_best_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -397,7 +397,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_full_noall_nosource",
+      "name": "append-no-conflicts-metricbeat_full_noall_nosource",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -420,7 +420,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_full_noall_nosource_noindex",
+      "name": "append-no-conflicts-metricbeat_full_noall_nosource_noindex",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_metric_default",
+      "name": "append-no-conflicts-metricbeat_metric_default",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -466,7 +466,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_metric_best",
+      "name": "append-no-conflicts-metricbeat_metric_best",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -490,7 +490,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_metric_noall",
+      "name": "append-no-conflicts-metricbeat_metric_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -513,7 +513,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_metric_best_noall",
+      "name": "append-no-conflicts-metricbeat_metric_best_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -537,7 +537,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_metric_noall_nosource",
+      "name": "append-no-conflicts-metricbeat_metric_noall_nosource",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
@@ -560,7 +560,7 @@
       ]
     },
     {
-      "name": "append-no-conflicts-index-append-metricbeat_metric_noall_nosource_noindex",
+      "name": "append-no-conflicts-metricbeat_metric_noall_nosource_noindex",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "index-settings": {
         "index.number_of_shards": 1,
