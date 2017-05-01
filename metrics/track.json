@@ -100,7 +100,7 @@
       "name": "metricbeat_metrics_best",
       "types": [
         {
-          "name": "type",
+          "name": "metricsets",
           "mapping": "metrics_default.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 107337861,
@@ -113,7 +113,7 @@
       "name": "metricbeat_metrics_noall",
       "types": [
         {
-          "name": "type",
+          "name": "metricsets",
           "mapping": "metrics_noall.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 107337861,
@@ -126,7 +126,7 @@
       "name": "metricbeat_metrics_best_noall",
       "types": [
         {
-          "name": "type",
+          "name": "metricsets",
           "mapping": "metrics_noall.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 107337861,
@@ -139,7 +139,7 @@
       "name": "metricbeat_metrics_noall_nosource",
       "types": [
         {
-          "name": "type",
+          "name": "metricsets",
           "mapping": "metrics_noall_nosource.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 107337861,
@@ -152,7 +152,7 @@
       "name": "metricbeat_metrics_noall_nosource_noindex",
       "types": [
         {
-          "name": "type",
+          "name": "metricsets",
           "mapping": "metricbeat_noall_nosource_noindex.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 107337861,
