@@ -1,11 +1,12 @@
 import elasticsearch
 
-def deleteindex(es, params):
+def forcemerge(es, params):
     """
-    Deletes all indices in Elasticsearch matching the specified index pattern.
+    Force merges indices matching an index pattern in Elasticsearch.
 
-    It expects the parameter hash to contain the following key:
-        "index_pattern"        - Specifies the index pattern to delete. Defaults to 'elasticlogs-*'
+    It expects the parameter hash to contain the following keys:
+        "index_pattern"        - Specifies the index pattern to forcemerge. Defaults to '*'
+        "max_num_segments"     - Specifies the maximum number of segments to merge to.
     """
     if 'index_pattern' in params:
         index_pattern = params['index_pattern']
