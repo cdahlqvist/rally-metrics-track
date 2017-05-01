@@ -237,7 +237,7 @@
     },
     {
       "name": "force-merge",
-      "operation-type": "force-merge",
+      "operation-type": "forcemerge",
       "max_num_segments": 1
     },
     {
