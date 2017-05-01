@@ -305,6 +305,7 @@
     {
       "name": "append-no-conflicts-metricbeat_full_default",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "default": true,
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
