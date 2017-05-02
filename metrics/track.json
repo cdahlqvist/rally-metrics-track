@@ -322,6 +322,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_full_default",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "default",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -330,7 +339,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "full",
-            "index_type": "default"
+            "index_type": "default",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -355,6 +365,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_full_best",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "best",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -363,7 +382,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "full",
-            "index_type": "best"
+            "index_type": "best",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -387,6 +407,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_full_noall",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -395,7 +424,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "full",
-            "index_type": "noall"
+            "index_type": "noall",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -420,6 +450,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_full_best_noall",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "best_noall",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -428,7 +467,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "full",
-            "index_type": "best_noall"
+            "index_type": "best_noall",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -452,6 +492,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_full_noall_nosource",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall_nosource",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -460,7 +509,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "full",
-            "index_type": "noall_nosource"
+            "index_type": "noall_nosource",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -484,6 +534,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_full_noall_nosource_noindex",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall_nosource_noindex",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -492,7 +551,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "full",
-            "index_type": "noall_nosource_noindex"
+            "index_type": "noall_nosource_noindex",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -516,6 +576,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_metrics_default",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "default",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -524,7 +593,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "single",
-            "index_type": "default"
+            "index_type": "default",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -549,6 +619,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_metrics_best",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "best",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -557,7 +636,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "single",
-            "index_type": "best"
+            "index_type": "best",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -581,6 +661,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_metrics_noall",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -589,7 +678,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "single",
-            "index_type": "noall"
+            "index_type": "noall",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -614,6 +704,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_metrics_best_noall",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "best_noall",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -622,7 +721,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "single",
-            "index_type": "best_noall"
+            "index_type": "best_noall",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -646,6 +746,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_metrics_noall_nosource",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall_nosource",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -654,7 +763,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "single",
-            "index_type": "noall_nosource"
+            "index_type": "noall_nosource",
+            "stats_type": "post-merge"
           }
         }
       ]
@@ -678,6 +788,15 @@
           }
         },
         {
+          "operation": "indicesstats_metricbeat_metrics_noall_nosource_noindex",
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall_nosource_noindex",
+            "stats_type": "pre-merge"
+          }
+        },
+        {
           "operation": "force-merge",
           "clients": 1
         },
@@ -686,7 +805,8 @@
           "iterations": 1,
           "meta": {
             "metrics_type": "single",
-            "index_type": "noall_nosource_noindex"
+            "index_type": "noall_nosource_noindex",
+            "stats_type": "post-merge"
           }
         }
       ]
