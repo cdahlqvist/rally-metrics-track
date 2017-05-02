@@ -314,7 +314,12 @@
         {
           "operation": "index-append-metricbeat_full_default",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "default",
+            "metrics_per_document": 7
+          }
         },
         {
           "operation": "force-merge",
@@ -322,7 +327,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_full_default",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "default"
+          }
         }
       ]
     },
@@ -338,7 +347,12 @@
         {
           "operation": "index-append-metricbeat_full_best",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "best",
+            "metrics_per_document": 7
+          }
         },
         {
           "operation": "force-merge",
@@ -346,7 +360,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_full_best",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "best"
+          }
         }
       ]
     },
@@ -361,7 +379,12 @@
         {
           "operation": "index-append-metricbeat_full_noall",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall",
+            "metrics_per_document": 7
+          }
         },
         {
           "operation": "force-merge",
@@ -369,7 +392,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_full_noall",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall"
+          }
         }
       ]
     },
@@ -385,7 +412,12 @@
         {
           "operation": "index-append-metricbeat_full_best_noall",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "best_noall",
+            "metrics_per_document": 7
+          }
         },
         {
           "operation": "force-merge",
@@ -393,7 +425,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_full_best_noall",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "best_noall"
+          }
         }
       ]
     },
@@ -408,7 +444,12 @@
         {
           "operation": "index-append-metricbeat_full_noall_nosource",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall_nosource",
+            "metrics_per_document": 7
+          }
         },
         {
           "operation": "force-merge",
@@ -416,7 +457,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_full_noall_nosource",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall_nosource"
+          }
         }
       ]
     },
@@ -431,7 +476,12 @@
         {
           "operation": "index-append-metricbeat_full_noall_nosource_noindex",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall_nosource_noindex",
+            "metrics_per_document": 7
+          }
         },
         {
           "operation": "force-merge",
@@ -439,7 +489,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_full_noall_nosource_noindex",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "noall_nosource_noindex"
+          }
         }
       ]
     },
@@ -454,7 +508,12 @@
         {
           "operation": "index-append-metricbeat_metrics_default",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "default",
+            "metrics_per_document": 1
+          }
         },
         {
           "operation": "force-merge",
@@ -462,7 +521,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_metrics_default",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "default"
+          }
         }
       ]
     },
@@ -478,7 +541,12 @@
         {
           "operation": "index-append-metricbeat_metrics_best",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "best",
+            "metrics_per_document": 1
+          }
         },
         {
           "operation": "force-merge",
@@ -486,7 +554,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_metrics_best",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "best"
+          }
         }
       ]
     },
@@ -501,7 +573,12 @@
         {
           "operation": "index-append-metricbeat_metrics_noall",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall",
+            "metrics_per_document": 1
+          }
         },
         {
           "operation": "force-merge",
@@ -509,7 +586,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_metrics_noall",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall"
+          }
         }
       ]
     },
@@ -525,7 +606,12 @@
         {
           "operation": "index-append-metricbeat_metrics_best_noall",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "best_noall",
+            "metrics_per_document": 1
+          }
         },
         {
           "operation": "force-merge",
@@ -533,7 +619,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_metrics_best_noall",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "best_noall"
+          }
         }
       ]
     },
@@ -548,7 +638,12 @@
         {
           "operation": "index-append-metricbeat_metrics_noall_nosource",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall_nosource",
+            "metrics_per_document": 1
+          }
         },
         {
           "operation": "force-merge",
@@ -556,7 +651,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_metrics_noall_nosource",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall_nosource"
+          }
         }
       ]
     },
@@ -571,7 +670,12 @@
         {
           "operation": "index-append-metricbeat_metrics_noall_nosource_noindex",
           "warmup-time-period": 0,
-          "clients": 8
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall_nosource_noindex",
+            "metrics_per_document": 1
+          }
         },
         {
           "operation": "force-merge",
@@ -579,7 +683,11 @@
         },
         {
           "operation": "indicesstats_metricbeat_metrics_noall_nosource_noindex",
-          "iterations": 1
+          "iterations": 1,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "noall_nosource_noindex"
+          }
         }
       ]
     }
