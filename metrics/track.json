@@ -12,9 +12,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_default.json",
           "documents": "metricbeat_full.json.bz2",
-          "document-count": 14499581,
-          "compressed-bytes": 202184602,
-          "uncompressed-bytes": 9289659717
+          "document-count": 19646800,
+          "compressed-bytes": 327039031,
+          "uncompressed-bytes": 8824349807
         }
       ]
     },
@@ -25,9 +25,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_default.json",
           "documents": "metricbeat_full.json.bz2",
-          "document-count": 14499581,
-          "compressed-bytes": 202184602,
-          "uncompressed-bytes": 9289659717
+          "document-count": 19646800,
+          "compressed-bytes": 327039031,
+          "uncompressed-bytes": 8824349807
         }
       ]
     },
@@ -38,9 +38,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_noall.json",
           "documents": "metricbeat_full.json.bz2",
-          "document-count": 14499581,
-          "compressed-bytes": 202184602,
-          "uncompressed-bytes": 9289659717
+          "document-count": 19646800,
+          "compressed-bytes": 327039031,
+          "uncompressed-bytes": 8824349807
         }
       ]
     },
@@ -51,9 +51,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_noall.json",
           "documents": "metricbeat_full.json.bz2",
-          "document-count": 14499581,
-          "compressed-bytes": 202184602,
-          "uncompressed-bytes": 9289659717
+          "document-count": 19646800,
+          "compressed-bytes": 327039031,
+          "uncompressed-bytes": 8824349807
         }
       ]
     },
@@ -64,9 +64,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_noall_nosource.json",
           "documents": "metricbeat_full.json.bz2",
-          "document-count": 14499581,
-          "compressed-bytes": 202184602,
-          "uncompressed-bytes": 9289659717
+          "document-count": 19646800,
+          "compressed-bytes": 327039031,
+          "uncompressed-bytes": 8824349807
         }
       ]
     },
@@ -77,9 +77,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_noall_nosource_noindex.json",
           "documents": "metricbeat_full.json.bz2",
-          "document-count": 14499581,
-          "compressed-bytes": 202184602,
-          "uncompressed-bytes": 9289659717
+          "document-count": 19646800,
+          "compressed-bytes": 327039031,
+          "uncompressed-bytes": 8824349807
         }
       ]
     },
@@ -90,8 +90,8 @@
           "name": "metricsets",
           "mapping": "metrics_default.json",
           "documents": "metricbeat_metrics.json.bz2",
-          "document-count": 107337861,
-          "compressed-bytes": 503158609,
+          "document-count": 146956939,
+          "compressed-bytes": 663020050,
           "uncompressed-bytes": 58543131196
         }
       ]
@@ -103,9 +103,9 @@
           "name": "metricsets",
           "mapping": "metrics_default.json",
           "documents": "metricbeat_metrics.json.bz2",
-          "document-count": 107337861,
-          "compressed-bytes": 503158609,
-          "uncompressed-bytes": 58543131196
+          "document-count": 146956939,
+          "compressed-bytes": 663020050,
+          "uncompressed-bytes": 53602424983
         }
       ]
     },
@@ -116,9 +116,9 @@
           "name": "metricsets",
           "mapping": "metrics_noall.json",
           "documents": "metricbeat_metrics.json.bz2",
-          "document-count": 107337861,
-          "compressed-bytes": 503158609,
-          "uncompressed-bytes": 58543131196
+          "document-count": 146956939,
+          "compressed-bytes": 663020050,
+          "uncompressed-bytes": 53602424983
         }
       ]
     },
@@ -129,9 +129,9 @@
           "name": "metricsets",
           "mapping": "metrics_noall.json",
           "documents": "metricbeat_metrics.json.bz2",
-          "document-count": 107337861,
-          "compressed-bytes": 503158609,
-          "uncompressed-bytes": 58543131196
+          "document-count": 146956939,
+          "compressed-bytes": 663020050,
+          "uncompressed-bytes": 53602424983
         }
       ]
     },
@@ -142,9 +142,9 @@
           "name": "metricsets",
           "mapping": "metrics_noall_nosource.json",
           "documents": "metricbeat_metrics.json.bz2",
-          "document-count": 107337861,
-          "compressed-bytes": 503158609,
-          "uncompressed-bytes": 58543131196
+          "document-count": 146956939,
+          "compressed-bytes": 663020050,
+          "uncompressed-bytes": 53602424983
         }
       ]
     },
@@ -155,9 +155,9 @@
           "name": "metricsets",
           "mapping": "metricbeat_noall_nosource_noindex.json",
           "documents": "metricbeat_metrics.json.bz2",
-          "document-count": 107337861,
-          "compressed-bytes": 503158609,
-          "uncompressed-bytes": 58543131196
+          "document-count": 146956939,
+          "compressed-bytes": 663020050,
+          "uncompressed-bytes": 53602424983
         }
       ]
     }
@@ -306,6 +306,9 @@
       "name": "append-no-conflicts-metricbeat_full_default",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
       "default": true,
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -348,6 +351,9 @@
     {
       "name": "append-no-conflicts-metricbeat_full_best",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0,
@@ -391,6 +397,9 @@
     {
       "name": "append-no-conflicts-metricbeat_full_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -433,6 +442,9 @@
     {
       "name": "append-no-conflicts-metricbeat_full_best_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0,
@@ -476,6 +488,9 @@
     {
       "name": "append-no-conflicts-metricbeat_full_noall_nosource",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -518,6 +533,9 @@
     {
       "name": "append-no-conflicts-metricbeat_full_noall_nosource_noindex",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -560,6 +578,9 @@
     {
       "name": "append-no-conflicts-metricbeat_metrics_default",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -602,6 +623,9 @@
     {
       "name": "append-no-conflicts-metricbeat_metrics_best",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0,
@@ -645,6 +669,9 @@
     {
       "name": "append-no-conflicts-metricbeat_metrics_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -687,6 +714,9 @@
     {
       "name": "append-no-conflicts-metricbeat_metrics_best_noall",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0,
@@ -730,6 +760,9 @@
     {
       "name": "append-no-conflicts-metricbeat_metrics_noall_nosource",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
@@ -772,6 +805,9 @@
     {
       "name": "append-no-conflicts-metricbeat_metrics_noall_nosource_noindex",
       "description": "Indexes the whole full metricbeat document corpus into Elasticsearch with the appropriate mapping. Document ids are unique so all index operations are append only.",
+      "meta": {
+        "version": "1"
+      },
       "index-settings": {
         "index.number_of_shards": 1,
         "index.number_of_replicas": 0
