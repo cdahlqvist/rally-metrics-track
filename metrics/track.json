@@ -92,7 +92,7 @@
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 146956939,
           "compressed-bytes": 663020050,
-          "uncompressed-bytes": 58543131196
+          "uncompressed-bytes": 53602424983
         }
       ]
     },
