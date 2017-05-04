@@ -153,7 +153,7 @@
       "types": [
         {
           "name": "metricsets",
-          "mapping": "metricbeat_noall_nosource_noindex.json",
+          "mapping": "metrics_noall_nosource_noindex.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 146956939,
           "compressed-bytes": 663020050,
