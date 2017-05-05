@@ -160,6 +160,32 @@
           "uncompressed-bytes": 53602424983
         }
       ]
+    },
+    {
+      "name": "influxdb_full",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metricbeat_default.json",
+          "documents": "influxdb_full.txt.bz2",
+          "document-count": 19646800,
+          "compressed-bytes": 357471158,
+          "uncompressed-bytes": 8584606404
+        }
+      ]
+    },
+    {
+      "name": "influxdb_metrics",
+      "types": [
+        {
+          "name": "metricsets",
+          "mapping": "metrics_default.json",
+          "documents": "influxdb_metrics.txt.bz2",
+          "document-count": 146956939,
+          "compressed-bytes": 681285033,
+          "uncompressed-bytes": 41606430129
+        }
+      ]
     }
   ],
   "operations": [
@@ -236,6 +262,20 @@
       "bulk-size": 1000
     },
     {
+      "name": "index-influxdb_full",
+      "operation-type": "influxdb_bulk",
+      "index": "influxdb_full",
+      "bulk-size": 1000,
+      "database": "influxdb_full"
+    },
+    {
+      "name": "index-influxdb_metrics",
+      "operation-type": "influxdb_bulk",
+      "index": "influxdb_metrics",
+      "bulk-size": 1000,
+      "database": "influxdb_metrics"
+    },
+    {
       "name": "force-merge",
       "operation-type": "forcemerge",
       "max_num_segments": 1
@@ -299,6 +339,16 @@
       "name": "indicesstats_metricbeat_metrics_noall_nosource_noindex",
       "operation-type": "indicesstats",
       "index_pattern": "metricbeat_metrics_noall_nosource_noindex"
+    },
+    {
+      "name": "influxdb_create_database-influxdb_full",
+      "operation-type": "influxdb_create_database",
+      "database": "influxdb_full"
+    },
+    {
+      "name": "influxdb_create_database-influxdb_metrics",
+      "operation-type": "influxdb_create_database",
+      "database": "influxdb_metrics"
     }
   ],
   "challenges": [
@@ -843,6 +893,60 @@
             "metrics_type": "single",
             "index_type": "noall_nosource_noindex",
             "stats_type": "post-merge"
+          }
+        }
+      ]
+    },
+    {
+      "name": "index-influxdb_full",
+      "description": "Indexes the whole full metricbeat document corpus into InfluxDB.",
+      "meta": {
+        "version": "1"
+      },
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "influxdb_create_database-influxdb_full",
+          "iterations": 1
+        },
+        {
+          "operation": "index-influxdb_full",
+          "warmup-time-period": 0,
+          "clients": 8,
+          "meta": {
+            "metrics_type": "full",
+            "index_type": "influxdb",
+            "metrics_per_document": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "index-influxdb_metrics",
+      "description": "Indexes the whole full metricbeat document corpus into InfluxDB.",
+      "meta": {
+        "version": "1"
+      },
+      "index-settings": {
+        "index.number_of_shards": 1,
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "influxdb_create_database-influxdb_metrics",
+          "iterations": 1
+        },
+        {
+          "operation": "index-influxdb_metrics",
+          "warmup-time-period": 0,
+          "clients": 8,
+          "meta": {
+            "metrics_type": "single",
+            "index_type": "influxdb",
+            "metrics_per_document": 1
           }
         }
       ]
