@@ -265,6 +265,7 @@
       "name": "index-influxdb_full",
       "operation-type": "influxdb_bulk",
       "index": "influxdb_full",
+      "param-source": "file-reader",
       "bulk-size": 1000,
       "database": "influxdb_full"
     },
@@ -272,6 +273,7 @@
       "name": "index-influxdb_metrics",
       "operation-type": "influxdb_bulk",
       "index": "influxdb_metrics",
+      "param-source": "file-reader",
       "bulk-size": 1000,
       "database": "influxdb_metrics"
     },
