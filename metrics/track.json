@@ -910,7 +910,8 @@
       "schedule": [
         {
           "operation": "influxdb_create_database-influxdb_full",
-          "iterations": 1
+          "iterations": 1,
+          "clients": 1
         },
         {
           "operation": "index-influxdb_full",
@@ -937,7 +938,8 @@
       "schedule": [
         {
           "operation": "influxdb_create_database-influxdb_metrics",
-          "iterations": 1
+          "iterations": 1,
+          "clients": 1
         },
         {
           "operation": "index-influxdb_metrics",

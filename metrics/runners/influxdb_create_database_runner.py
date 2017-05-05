@@ -33,7 +33,7 @@ class InfluxDBCreateDatabaseRunner:
             self._passwd = "root"
 
         logger.info("InfluxDBCreateDatabaseRunner: Creating InfluxDB client.")
-        self._influxdb_client = InfluxDBClient(self._host, self._port, self._user, self._passwd)
+        self._influxdb_client = InfluxDBClient(host=self._host, port=self._port, username=self._user, password=self._passwd)
 
     def __enter__(self):
         return self

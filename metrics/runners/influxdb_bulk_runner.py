@@ -35,7 +35,7 @@ class InfluxDBBulkRunner:
         self._database = None
 
         logger.info("InfluxDBBulkRunner: Creating InfluxDB client.")
-        self._influxdb_client = InfluxDBClient(self._host, self._port, self._user, self._passwd)
+        self._influxdb_client = InfluxDBClient(host=self._host, port=self._port, username=self._user, password=self._passwd)
 
     def __enter__(self):
         return self
@@ -76,6 +76,8 @@ class InfluxDBBulkRunner:
             time_precision = params['time_precision']
         else:
             time_precision = 'ms'
+
+        logger.info("InfluxDBBulkRunner: Params: {}".format(params))
 
         body_size = len(params['body'])
         if body_size != bulk_size:
