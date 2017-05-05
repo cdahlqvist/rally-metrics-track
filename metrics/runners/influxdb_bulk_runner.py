@@ -3,6 +3,8 @@ from influxdb import InfluxDBClient
 import os
 import logging
 
+from esrally import exceptions
+
 logger = logging.getLogger("track.metrics")
 
 class InfluxDBBulkRunner:
@@ -36,6 +38,7 @@ class InfluxDBBulkRunner:
 
         logger.info("InfluxDBBulkRunner: Creating InfluxDB client.")
         self._influxdb_client = InfluxDBClient(host=self._host, port=self._port, username=self._user, password=self._passwd)
+        logger.info("InfluxDBBulkRunner: InfluxDB client created.")
 
     def __enter__(self):
         return self

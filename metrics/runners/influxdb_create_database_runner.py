@@ -34,6 +34,7 @@ class InfluxDBCreateDatabaseRunner:
 
         logger.info("InfluxDBCreateDatabaseRunner: Creating InfluxDB client.")
         self._influxdb_client = InfluxDBClient(host=self._host, port=self._port, username=self._user, password=self._passwd)
+        logger.info("InfluxDBCreateDatabaseRunner: InfluxDB client created.")
 
     def __enter__(self):
         return self
@@ -60,7 +61,10 @@ class InfluxDBCreateDatabaseRunner:
         logger.info("InfluxDBCreateDatabaseRunner: Check if database {} already exists.".format(database))
         database_exists = False
 
-        dbs = self._influxdb_client.get_list_database()
+        try:
+            dbs = self._influxdb_client.get_list_database()
+        except BaseException:
+            print("ERROR XXX")
 
         logger.info("InfluxDBCreateDatabaseRunner: Current databases: {}".format(dbs))
 
