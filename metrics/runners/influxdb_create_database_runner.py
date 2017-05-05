@@ -40,7 +40,7 @@ class InfluxDBCreateDatabaseRunner:
 
     def __call__(self, es, params):
         """
-        Runs one bulk indexing operation against InfluxDB.
+        Runs one database creation operation against InfluxDB.
 
         :param es: The Elasticsearch client. Not used here
         :param params: A hash with all parameters. See below for details.

@@ -52,7 +52,7 @@ class InfluxDBBulkRunner:
 
         * ``body``: containing all documents for the current bulk request.
         * ``bulk-size``: the number of documents in this bulk.
-        * ``database``: the name of the database to insert this bulk request into. defaults to 'rally'
+        * ``database``: the name of the database to insert this bulk request into. Defaults to 'rally'
         * ``time_precision``: the time precision used for points to be written. Defaults to 'ms'.
         """
 
@@ -80,8 +80,6 @@ class InfluxDBBulkRunner:
         body_size = len(params['body'])
         if body_size != bulk_size:
             raise exceptions.DataError("Bulk size ({}) does not correspond to the size of the body ({}).".format(bulk_size, body_size))
-
-        logger.info("InfluxDBBulkRunner: Perform indexing request into {}.".format(database))
 
         response = {}
         if self._influxdb_client.write_points(params['body'], time_precision=time_precision, database=database, retention_policy=None, tags=None, batch_size=bulk_size, protocol='line'):
