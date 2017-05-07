@@ -61,10 +61,7 @@ class InfluxDBCreateDatabaseRunner:
         logger.info("InfluxDBCreateDatabaseRunner: Check if database {} already exists.".format(database))
         database_exists = False
 
-        try:
-            dbs = self._influxdb_client.get_list_database()
-        except BaseException:
-            print("ERROR XXX")
+        dbs = self._influxdb_client.get_list_database()
 
         logger.info("InfluxDBCreateDatabaseRunner: Current databases: {}".format(dbs))
 
