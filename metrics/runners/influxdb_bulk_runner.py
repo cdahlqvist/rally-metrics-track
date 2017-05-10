@@ -34,7 +34,7 @@ class InfluxDBBulkRunner:
         else:
             self._passwd = "root"
 
-        self._database = None
+        self._index = None
 
         logger.info("InfluxDBBulkRunner: Creating InfluxDB client.")
         self._influxdb_client = InfluxDBClient(host=self._host, port=self._port, username=self._user, password=self._passwd)
@@ -55,19 +55,20 @@ class InfluxDBBulkRunner:
 
         * ``body``: containing all documents for the current bulk request.
         * ``bulk-size``: the number of documents in this bulk.
-        * ``database``: the name of the database to insert this bulk request into. Defaults to 'rally'
+        * ``index``: the name of the database to insert this bulk request into. Defaults to 'rally'
         * ``time_precision``: the time precision used for points to be written. Defaults to 'ms'.
         """
 
         # Set database if this is not already set
-        if 'database' in params:
-            database = params['database']
+        if 'index' in params:
+            index = params['index']
         else:
-            database = "rally"
+            index = "rally"
 
-        if self._database != database:
-            self._influxdb_client.switch_database(database)
-            self._database = database
+        if self._index != index:
+            logger.info("InfluxDBBulkRunner: Switching to database {}.".format(index))
+            self._influxdb_client.switch_database(index)
+            self._index = index
 
         try:
             bulk_size = params["bulk-size"]
@@ -87,7 +88,7 @@ class InfluxDBBulkRunner:
             raise exceptions.DataError("Bulk size ({}) does not correspond to the size of the body ({}).".format(bulk_size, body_size))
 
         response = {}
-        if self._influxdb_client.write_points(params['body'], time_precision=time_precision, database=database, retention_policy=None, tags=None, batch_size=bulk_size, protocol='line'):
+        if self._influxdb_client.write_points(params['body'], time_precision=time_precision, database=index, retention_policy=None, tags=None, batch_size=bulk_size, protocol='line'):
             response = { "weight": bulk_size, "unit": "docs", "bulk-size": bulk_size, "success": True, "success-count": bulk_size, "error-count": 0 }
         else:
             response = { "weight": bulk_size, "unit": "docs", "bulk-size": bulk_size, "success": False, "success-count": 0, "error-count": bulk_size }

@@ -49,12 +49,12 @@ class InfluxDBCreateDatabaseRunner:
 
         It expects a parameter dict with the following mandatory keys:
 
-        * ``database``: the name of the database to create and clear.
+        * ``index``: the name of the database to create and clear.
         """
 
         # Set database if this is not already set
-        if 'database' in params:
-            database = params['database']
+        if 'index' in params:
+            database = params['index']
         else:
             database = "rally"
 

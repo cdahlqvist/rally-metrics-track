@@ -267,8 +267,7 @@
       "index": "influxdb_full",
       "param-source": "file-reader",
       "action-and-meta-data": "none",
-      "bulk-size": 1000,
-      "database": "influxdb_full"
+      "bulk-size": 1000
     },
     {
       "name": "index-influxdb_metrics",
@@ -276,8 +275,7 @@
       "index": "influxdb_metrics",
       "param-source": "file-reader",
       "action-and-meta-data": "none",
-      "bulk-size": 1000,
-      "database": "influxdb_metrics"
+      "bulk-size": 1000
     },
     {
       "name": "force-merge",
@@ -347,12 +345,12 @@
     {
       "name": "influxdb_create_database-influxdb_full",
       "operation-type": "influxdb_create_database",
-      "database": "influxdb_full"
+      "index": "influxdb_full"
     },
     {
       "name": "influxdb_create_database-influxdb_metrics",
       "operation-type": "influxdb_create_database",
-      "database": "influxdb_metrics"
+      "index": "influxdb_metrics"
     }
   ],
   "challenges": [
