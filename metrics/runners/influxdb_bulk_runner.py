@@ -65,7 +65,7 @@ class InfluxDBBulkRunner:
         else:
             index = "rally"
 
-        if self._index != index:
+        if not self._index or self._index != index:
             logger.info("InfluxDBBulkRunner: Switching to database {}.".format(index))
             self._influxdb_client.switch_database(index)
             self._index = index
@@ -80,8 +80,6 @@ class InfluxDBBulkRunner:
             time_precision = params['time_precision']
         else:
             time_precision = 'ms'
-
-        logger.info("InfluxDBBulkRunner: Params: {}".format(params))
 
         body_size = len(params['body'])
         if body_size != bulk_size:
