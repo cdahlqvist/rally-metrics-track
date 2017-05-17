@@ -78,7 +78,7 @@
           "mapping": "metricbeat_noall_nosource_noindex.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": ,
+          "compressed-bytes": 325054766,
           "uncompressed-bytes": 8839476021
         }
       ]
