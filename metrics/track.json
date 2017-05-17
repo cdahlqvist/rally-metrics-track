@@ -1,9 +1,7 @@
 {
-  "meta": {
-    "short-description": "Metrics benchmark",
-    "description": "This benchmark indexes Metricbeat data collected from Elastic intrastructure.",
-    "data-url": "http://users.elasticsearch.org.s3.amazonaws.com/cdahlqvist/rally"
-  },
+  "short-description": "Metrics benchmark",
+  "description": "This benchmark indexes Metricbeat data collected from Elastic intrastructure.",
+  "data-url": "http://users.elasticsearch.org.s3.amazonaws.com/cdahlqvist/rally",
   "indices": [
     {
       "name": "metricbeat_full_default",
