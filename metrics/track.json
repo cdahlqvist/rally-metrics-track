@@ -11,8 +11,8 @@
           "mapping": "metricbeat_default.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 325054766,
-          "uncompressed-bytes": 8839476021
+          "compressed-bytes": 365220739,
+          "uncompressed-bytes": 9344782625
         }
       ]
     },
@@ -24,8 +24,8 @@
           "mapping": "metricbeat_default.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 325054766,
-          "uncompressed-bytes": 8839476021
+          "compressed-bytes": 365220739,
+          "uncompressed-bytes": 9344782625
         }
       ]
     },
@@ -37,8 +37,8 @@
           "mapping": "metricbeat_noall.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 325054766,
-          "uncompressed-bytes": 8839476021
+          "compressed-bytes": 365220739,
+          "uncompressed-bytes": 9344782625
         }
       ]
     },
@@ -50,8 +50,8 @@
           "mapping": "metricbeat_noall.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 325054766,
-          "uncompressed-bytes": 8839476021
+          "compressed-bytes": 365220739,
+          "uncompressed-bytes": 9344782625
         }
       ]
     },
@@ -63,8 +63,8 @@
           "mapping": "metricbeat_noall_nosource.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 325054766,
-          "uncompressed-bytes": 8839476021
+          "compressed-bytes": 365220739,
+          "uncompressed-bytes": 9344782625
         }
       ]
     },
@@ -76,8 +76,8 @@
           "mapping": "metricbeat_noall_nosource_noindex.json",
           "documents": "metricbeat_full.json.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 325054766,
-          "uncompressed-bytes": 8839476021
+          "compressed-bytes": 365220739,
+          "uncompressed-bytes": 9344782625
         }
       ]
     },
@@ -89,8 +89,8 @@
           "mapping": "metrics_default.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 674741513,
-          "uncompressed-bytes": 53262637999
+          "compressed-bytes": 869684033,
+          "uncompressed-bytes": 56799784227
         }
       ]
     },
@@ -102,8 +102,8 @@
           "mapping": "metrics_default.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 674741513,
-          "uncompressed-bytes": 53262637999
+          "compressed-bytes": 869684033,
+          "uncompressed-bytes": 56799784227
         }
       ]
     },
@@ -115,8 +115,8 @@
           "mapping": "metrics_noall.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 674741513,
-          "uncompressed-bytes": 53262637999
+          "compressed-bytes": 869684033,
+          "uncompressed-bytes": 56799784227
         }
       ]
     },
@@ -128,8 +128,8 @@
           "mapping": "metrics_noall.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 674741513,
-          "uncompressed-bytes": 53262637999
+          "compressed-bytes": 869684033,
+          "uncompressed-bytes": 56799784227
         }
       ]
     },
@@ -141,8 +141,8 @@
           "mapping": "metrics_noall_nosource.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 674741513,
-          "uncompressed-bytes": 53262637999
+          "compressed-bytes": 869684033,
+          "uncompressed-bytes": 56799784227
         }
       ]
     },
@@ -154,8 +154,8 @@
           "mapping": "metrics_noall_nosource_noindex.json",
           "documents": "metricbeat_metrics.json.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 674741513,
-          "uncompressed-bytes": 53262637999
+          "compressed-bytes": 869684033,
+          "uncompressed-bytes": 56799784227
         }
       ]
     },
@@ -167,8 +167,8 @@
           "mapping": "metricbeat_default.json",
           "documents": "influxdb_full.txt.bz2",
           "document-count": 19646800,
-          "compressed-bytes": 355620830,
-          "uncompressed-bytes": 8614395280
+          "compressed-bytes": 395668175,
+          "uncompressed-bytes": 9119724876
         }
       ]
     },
@@ -180,8 +180,8 @@
           "mapping": "metrics_default.json",
           "documents": "influxdb_metrics.txt.bz2",
           "document-count": 144862273,
-          "compressed-bytes": 692523850,
-          "uncompressed-bytes": 41597254449
+          "compressed-bytes": 861781645,
+          "uncompressed-bytes": 45134561621
         }
       ]
     }
