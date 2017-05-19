@@ -341,6 +341,16 @@
       "index_pattern": "metricbeat_metrics_noall_nosource_noindex"
     },
     {
+      "name": "indicesstats_influxdb_full",
+      "operation-type": "influxdb_database_size",
+      "index_pattern": "influxdb_full"
+    },
+    {
+      "name": "indicesstats_influxdb_metrics",
+      "operation-type": "influxdb_database_size",
+      "index_pattern": "influxdb_metrics"
+    },
+    {
       "name": "influxdb_create_database-influxdb_full",
       "operation-type": "influxdb_create_database",
       "index": "influxdb_full"
@@ -922,6 +932,11 @@
             "index_type": "influxdb",
             "metrics_per_document": 7
           }
+        },
+        {
+          "operation": "indicesstats_influxdb_full",
+          "iterations": 1,
+          "clients": 1
         }
       ]
     },
@@ -950,6 +965,11 @@
             "index_type": "influxdb",
             "metrics_per_document": 1
           }
+        },
+        {
+          "operation": "indicesstats_influxdb_metrics",
+          "iterations": 1,
+          "clients": 1
         }
       ]
     }
