@@ -80,7 +80,7 @@ class InfluxDBDatabaseSizeRunner:
 
         if 'series' in response.keys():
             for item in response['series']:
-                if item['tags']['database'] == database
+                if item['tags']['database'] == database:
                     col_list = item['columns']
                     val_list = item['values'][0]
 
