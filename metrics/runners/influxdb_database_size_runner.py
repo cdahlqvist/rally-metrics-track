@@ -2,6 +2,7 @@ from influxdb import InfluxDBClient
 
 import os
 import logging
+import time
 
 logger = logging.getLogger("track.metrics")
 
@@ -50,7 +51,11 @@ class InfluxDBDatabaseSizeRunner:
         It expects a parameter dict with the following mandatory keys:
 
         * ``index``: the name of the database to get size of.
+        * ``sleep``: the number of seconds to sleep before retrieving stats. Defaults to 0.
         """
+        if 'sleep' in params:
+            time.sleep(int(params['sleep'])
+
         if 'index' in params:
             database = params['index']
         else:
