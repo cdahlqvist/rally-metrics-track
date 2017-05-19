@@ -64,7 +64,7 @@ class InfluxDBDatabaseSizeRunner:
 
         query = 'SELECT "diskBytes", "writePointsOk" FROM "shard" WHERE "database"="{}" GROUP BY "database" ORDER BY time DESC LIMIT 1'.format(database)
 
-        response = self._influxdb_client.query(query, database="_internal")
+        response = self._influxdb_client.query(query, database="_internal").raw
 
         if 'results' in response.keys():
             stats = respoinse['results'][0]['series'][0]
