@@ -67,7 +67,7 @@ class InfluxDBDatabaseSizeRunner:
             "index_pattern": database
         }
 
-        query = 'SELECT diskBytes, writePointsOk FROM "shard" GROUP BY "database" ORDER BY time DESC LIMIT 1'.format(database)
+        query = 'SELECT diskBytes, writePointsOk FROM "shard" GROUP BY "database" ORDER BY time DESC LIMIT 1'
 
         logger.info("[InfluxDBDatabaseSizeRunner] Query: {}".format(query))
 
@@ -75,18 +75,17 @@ class InfluxDBDatabaseSizeRunner:
 
         logger.info("[InfluxDBDatabaseSizeRunner] Response: {}".format(response))
 
-        if 'results' in response.keys():
-            stats = respoinse['results'][0]['series'][0]
+        response['total_doc_count'] = 0
+        response['total_size_bytes'] = 0
 
-            col_list = stats['columns']
-            val_list = stats['values'][0]
+        if 'series' in response.keys():
+            for item in response['series']:
+                if item['tags']['database'] == database
+                    col_list = item['columns']
+                    val_list = item['values'][0]
 
-            response['total_doc_count'] = val_list[col_list.index("writePointsOk")]
-            response['total_size_bytes'] = val_list[col_list.index("diskBytes")]
-
-        else:
-            response['total_doc_count'] = 0
-            response['total_size_bytes'] = 0
+                    response['total_doc_count'] = val_list[col_list.index("writePointsOk")]
+                    response['total_size_bytes'] = val_list[col_list.index("diskBytes")]
 
         logger.info("[InfluxDBDatabaseSizeRunner] Database: {} Points: {} Size: {}".format(database, response['total_doc_count'], response['total_size_bytes']))
 
