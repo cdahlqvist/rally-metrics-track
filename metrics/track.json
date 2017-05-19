@@ -343,12 +343,12 @@
     {
       "name": "indicesstats_influxdb_full",
       "operation-type": "influxdb_database_size",
-      "index_pattern": "influxdb_full"
+      "index": "influxdb_full"
     },
     {
       "name": "indicesstats_influxdb_metrics",
       "operation-type": "influxdb_database_size",
-      "index_pattern": "influxdb_metrics"
+      "index": "influxdb_metrics"
     },
     {
       "name": "influxdb_create_database-influxdb_full",
