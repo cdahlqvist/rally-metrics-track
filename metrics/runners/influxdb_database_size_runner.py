@@ -3,7 +3,6 @@ from influxdb import InfluxDBClient
 import os
 import logging
 import time
-import json
 
 logger = logging.getLogger("track.metrics")
 
@@ -72,7 +71,7 @@ class InfluxDBDatabaseSizeRunner:
 
         logger.info("[InfluxDBDatabaseSizeRunner] Query: {}".format(query))
 
-        response = json.loads(self._influxdb_client.query(query, database="_internal").raw)
+        response = self._influxdb_client.query(query, database="_internal").raw
 
         logger.info("[InfluxDBDatabaseSizeRunner] Response: {}".format(response))
 

@@ -344,13 +344,13 @@
       "name": "indicesstats_influxdb_full",
       "operation-type": "influxdb_database_size",
       "index": "influxdb_full",
-      "sleep": 60
+      "sleep": 10
     },
     {
       "name": "indicesstats_influxdb_metrics",
       "operation-type": "influxdb_database_size",
       "index": "influxdb_metrics",
-      "sleep": 60
+      "sleep": 10
     },
     {
       "name": "influxdb_create_database-influxdb_full",
