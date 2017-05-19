@@ -69,11 +69,7 @@ class InfluxDBDatabaseSizeRunner:
 
         query = 'SELECT diskBytes, writePointsOk FROM "shard" GROUP BY "database" ORDER BY time DESC LIMIT 1'
 
-        logger.info("[InfluxDBDatabaseSizeRunner] Query: {}".format(query))
-
         response = self._influxdb_client.query(query, database="_internal").raw
-
-        logger.info("[InfluxDBDatabaseSizeRunner] Response: {}".format(response))
 
         response['total_doc_count'] = 0
         response['total_size_bytes'] = 0
