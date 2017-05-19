@@ -54,7 +54,7 @@ class InfluxDBDatabaseSizeRunner:
         * ``sleep``: the number of seconds to sleep before retrieving stats. Defaults to 0.
         """
         if 'sleep' in params:
-            time.sleep(int(params['sleep'])
+            time.sleep(int(params['sleep']))
 
         if 'index' in params:
             database = params['index']
