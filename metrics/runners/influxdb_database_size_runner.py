@@ -69,13 +69,13 @@ class InfluxDBDatabaseSizeRunner:
 
         query = 'SELECT diskBytes, writePointsOk FROM "shard" GROUP BY "database" ORDER BY time DESC LIMIT 1'
 
-        response = self._influxdb_client.query(query, database="_internal").raw
+        resp = self._influxdb_client.query(query, database="_internal").raw
 
         response['total_doc_count'] = 0
         response['total_size_bytes'] = 0
 
-        if 'series' in response.keys():
-            for item in response['series']:
+        if 'series' in resp.keys():
+            for item in resp['series']:
                 if item['tags']['database'] == database:
                     col_list = item['columns']
                     val_list = item['values'][0]
